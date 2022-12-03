@@ -1,0 +1,11 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 2vw;
+    background-color:rgb(6, 6, 51);
+    display: flex;
+    flex-wrap: wrap;
+  }

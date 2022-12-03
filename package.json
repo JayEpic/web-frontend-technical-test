@@ -4,7 +4,10 @@
   "description": "Wemap - Tous droits réservés - Les maquettes ainsi que les documents relatifs au test sont la propriété privée de la société SAS Wemap.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -15,9 +18,26 @@
   "bugs": {
     "url": "https://github.com/wemap/technical-test/issues"
   },
-  "homepage": "https://github.com/wemap/technical-test#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
