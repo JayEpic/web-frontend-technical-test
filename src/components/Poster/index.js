@@ -1,28 +1,40 @@
 import React from "react";
-import { Component } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { useState } from "react";
 import Movies from "../../movies.json";
-import './poster.css';
+import "./poster.css";
 
-export default class Poster extends Component {
-  render() {
-    return (
-      <>
-        <Container fluid>
-            {Movies.map((movie, i) => (
-              <Row className="poster">
-                <Col key={i} sm>
-                    <span>
-                    <img src={"./dist/" + movie.cover} key={i}></img>
-                    <p>{movie.title}</p>
-                    </span>
-                </Col>
-              </Row>
-            ))}
-        </Container>
-      </>
-    );
-  }
+export default function Poster() {
+  const [selected, setSelected] = useState({ id: 0, isSelected: false });
+
+  return (
+    <>
+      {Movies.map((movie, i) => (
+        <div>
+          <span key={i} className="poster">
+            <img className="image" src={"./dist/" + movie.cover}></img>
+            <span>
+              <p>{movie.title}</p>
+              {selected.isSelected ? (
+                <img
+                  className="icon"
+                  onClick={() => {
+                    setSelected({ id: 0, isSelected: false });
+                  }}
+                  src="./dist/assets/icons/bookmark-2.png"
+                ></img>
+              ) : (
+                <img
+                  className="icon"
+                  onClick={() => {
+                    setSelected({ id: i, isSelected: true });
+                  }}
+                  src="./dist/assets/icons/bookmark-1.png"
+                ></img>
+              )}
+            </span>
+          </span>
+        </div>
+      ))}
+    </>
+  );
 }
